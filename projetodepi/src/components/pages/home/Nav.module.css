@@ -1,0 +1,69 @@
+.HeaderStyle{
+   
+    display:flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+
+    background-color: #fff;
+    height: 100px;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 230px;
+    height: auto;
+}
+
+.consumoConsciente {
+    color: #496555;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px; 
+    margin-bottom: 10px; 
+}
+
+
+.navEstilo{
+    position: absolute;
+    right: 0;
+    
+   
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.item{
+    margin-right: 50px;
+}
+
+a:link{
+    text-decoration: none;
+    color: #3D5547;
+    font-size: 14px;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #3D5547;
+}
+
+a:hover {
+    color: #000
+    
+  }
+
+  
+ 
+  /*
+    justify-content: flex-end;
+    align-items: flex-end; 
+    display: flex;
+    flex-direction: row;
+    */

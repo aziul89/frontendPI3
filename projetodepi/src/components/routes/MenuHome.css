@@ -1,0 +1,40 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-toggle {
+    background-color: #ffffff00;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .category-button {
+    color: #3D5547;
+    font-size: 14px; 
+  }
+  
+  .dropdown-menu {
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 8px 0;
+    list-style: none;
+  }
+  
+  .dropdown-menu li {
+    
+    padding: 8px 12px;
+    
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #ACD9BE
+  }
+  
+  .linkstyle{
+    
+  }
