@@ -1,0 +1,40 @@
+.categoria-roupa {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .categoria-roupa h2 {
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    padding: 10px;
+  }
+  
+  .product-info h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .product-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #888;
+  }
