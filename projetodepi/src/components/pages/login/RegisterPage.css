@@ -4,24 +4,32 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FFF9E2; /* Cor de fundo semelhante à página de login */
+    background-color: #FFF9E2;
+}
+
+.logo {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 30px; 
 }
 
 .register-page h2 {
     margin-bottom: 30px;
-    font-size: 20px;
-    color: #3D5547; /* Cor do texto semelhante à página de login */
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #3D5547;
 }
 
 .register-page h3 {
     margin-bottom: 20px;
     font-size: 12px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #eb0909; /* Cor do texto semelhante à página de login */
+    color: #eb0909; 
 }
 
 .register-page form {
     width: 400px; /* Largura do formulário */
+    
 }
 
 .register-page .form-group {
@@ -59,7 +67,7 @@
     border-radius: 5px;
     background-color: #3D5547; /* Cor do botão semelhante à página de login */
     color: #fff; /* Cor do texto do botão */
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }

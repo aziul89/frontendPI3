@@ -14,13 +14,12 @@ import QuemSomos from './components/pages/home/QuemSomos';
 import LoginPage from './components/pages/login/LoginPage';
 import DataPage from './components/pages/login/DataPage';
 import RegisterPage from './components/pages/login/RegisterPage';
-import AddressPagePage from './components/pages/login/AddressPage';
+import AddressPage from './components/pages/login/AddressPage';
 //pages_myaccount
 import Favoritos from './components/pages/myaccount/favoritos'
 import Pedidos from './components/pages/myaccount/pedidos'
 //components
 import Header from './components/pages/home/Header';
-import AddressPage from './components/pages/login/AddressPage';
 
 
 function App() {
