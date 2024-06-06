@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from './../../../AuthContext';
 import styles from './Nav.module.css';
 import DropdownMenu from './../../routes/MenuHome';
+import MyAccount from './../../routes/MyAccount'
 import LogoC from './../../../assets/images/LOGOCOCON.png';
 
 function Header() {
@@ -20,7 +21,7 @@ function Header() {
                         <li className={styles.item}><Link to="/">HOME</Link></li>
                         <li className={styles.item}><DropdownMenu /></li>
                         {isLoggedIn ? (
-                            <li className={styles.item}><Link to="/MinhaConta">MINHA CONTA</Link></li>
+                            <li className={styles.item}><MyAccount /></li>
                         ) : (
                             <li className={styles.item}><Link to="/LoginPage">LOGIN</Link></li>
                         )}

@@ -1,9 +1,12 @@
-.categoria-roupa {
+.categoria {
     padding: 20px;
     text-align: center;
   }
   
-  .categoria-roupa h2 {
+  .categoria h2 {
+    font-weight: 300;
+    color: #3D5547;
+    letter-spacing: 6px;
     margin-bottom: 20px;
   }
   
@@ -15,8 +18,10 @@
   
   .product-card {
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 2px;
     overflow: hidden;
+    max-width: 200px;
+    margin: auto;
   }
   
   .product-card img {
@@ -30,7 +35,7 @@
   
   .product-info h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 14px;
   }
   
   .product-info p {
