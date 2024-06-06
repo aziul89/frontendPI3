@@ -1,7 +1,9 @@
 //página de cadastro
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './RegisterPage.css'; // Importe os estilos necessários
+import './RegisterPage.css';
+import LogoCONCON from './../../../assets/images/LOGOCOCON.png';
+
 
 function RegisterPage() {
     const [email, setEmail] = useState('');
@@ -28,7 +30,10 @@ function RegisterPage() {
 
     return (
         <div className="register-page">
-            <h2>Cadastro</h2>
+            <img src={LogoCONCON} alt="Logo" className="logo" />
+            <div className="register-container"> 
+            <h2>CADASTRO</h2>
+            <h3>Você está quase lá...</h3>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Email:</label>
@@ -48,7 +53,9 @@ function RegisterPage() {
                 </div>
                 {error && <p className="error-message">{error}</p>}
                 <button type="submit">Próximo</button>
+                
             </form>
+            </div> 
         </div>
     );
 }

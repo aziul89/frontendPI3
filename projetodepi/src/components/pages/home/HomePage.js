@@ -11,7 +11,7 @@ function HomePage() {
     return (
         <>
             <div className={styles.HomePage}>
-                <div className={styles.SuperiorContent}>
+                <div className={styles.SuperiorContent}> 
                     <div className={styles.searchContainer}>
                         <input 
                             type="text" 

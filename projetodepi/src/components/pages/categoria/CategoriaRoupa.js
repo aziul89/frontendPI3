@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './Categoria.css';
+import './Categoria.css';
 
 const products = [
     { id: 1, name: 'Vestido estampado Viscose', price: 'R$379', image: 'https://via.placeholder.com/150' },
@@ -13,7 +13,7 @@ const products = [
 function CategoriaRoupa (){
     return(
        
-            <div className="categoria-roupa">
+            <div className="categoria">
               <h2>ROUPAS</h2>
               <div className="grid">
                 {products.map(product => (

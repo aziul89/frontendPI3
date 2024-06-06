@@ -9,8 +9,15 @@
 
 .register-page h2 {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 20px;
     color: #3D5547; /* Cor do texto semelhante à página de login */
+}
+
+.register-page h3 {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #eb0909; /* Cor do texto semelhante à página de login */
 }
 
 .register-page form {
@@ -27,6 +34,8 @@
     text-align: left;
     color: #3D5547;
 }
+
+
 
 .register-page .form-group input {
     background-color: #F3F3F3;

@@ -11,6 +11,7 @@ function LoginPage() {
     const navigate = useNavigate();
     const { setIsLoggedIn } = useAuth(); // Pegar a função setIsLoggedIn do contexto
 
+    // Exemplo de autentificação
     const handleSubmit = (e) => {
         e.preventDefault();
         const trimmedUsername = username.trim();
@@ -19,7 +20,7 @@ function LoginPage() {
         if (trimmedUsername !== '' && trimmedPassword !== '') {
             if (trimmedUsername === 'teste' && trimmedPassword === 'teste') {
                 setError('');
-                setIsLoggedIn(true); // Definir o usuário como logado
+                setIsLoggedIn(true);
                 navigate('/DataPage');
             } else {
                 setError('Login inválido. Por favor, tente novamente.');

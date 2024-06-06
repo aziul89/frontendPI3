@@ -1,0 +1,65 @@
+.address-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FFF9E2; /* Cor de fundo semelhante à página de login */
+}
+
+.address-page h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #3D5547; /* Cor do texto semelhante à página de login */
+}
+
+.address-page .progress-message {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.address-page form {
+    width: 400px; /* Largura do formulário */
+}
+
+.address-page .form-group {
+    margin-bottom: 20px;
+}
+
+.address-page .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #3D5547;
+}
+
+.address-page .form-group input {
+    background-color: #F3F3F3;
+    padding: 10px;
+    border: 1px solid #f4e6e6;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.address-page .error-message {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
+
+.address-page button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #3D5547; /* Cor do botão semelhante à página de login */
+    color: #fff; /* Cor do texto do botão */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.address-page button:hover {
+    background-color: #88b297; /* Cor do botão ao passar o mouse semelhante à página de login */
+}
