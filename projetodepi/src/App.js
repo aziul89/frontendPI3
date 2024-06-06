@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//estyles
+//styles
 import './App.css';
 //pages
 import HomePage from './components/pages/home/HomePage';
@@ -11,6 +11,7 @@ import QuemSomos from './components/pages/home/QuemSomos';
 import LoginPage from './components/pages/login/LoginPage';
 import DataPage from './components/pages/login/DataPage';
 import RegisterPage from './components/pages/login/RegisterPage';
+import MinhaConta from './components/pages/login/MinhaConta';
 //components
 import Header from './components/pages/home/Header';
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/DataPage" element={<DataPage />}/>
           <Route path="/RegisterPage" element={<RegisterPage />}/>
           <Route path="/QuemSomos" element={<QuemSomos />} />
+          <Route path="/MinhaConta" element={<MinhaConta />} />
         </Routes>  
       </Router>
     </div>

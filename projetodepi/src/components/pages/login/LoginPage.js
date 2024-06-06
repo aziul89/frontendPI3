@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './../../../AuthContext'; // Importar o hook de contexto
 import './LoginPage.css';
 import LogoCONCON from './../../../assets/images/LOGOCOCON.png';
 
 function LoginPage() {
-
-    // exemplo de autentificação para rotear para DataPage.js
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const { setIsLoggedIn } = useAuth(); // Pegar a função setIsLoggedIn do contexto
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,6 +19,7 @@ function LoginPage() {
         if (trimmedUsername !== '' && trimmedPassword !== '') {
             if (trimmedUsername === 'teste' && trimmedPassword === 'teste') {
                 setError('');
+                setIsLoggedIn(true); // Definir o usuário como logado
                 navigate('/DataPage');
             } else {
                 setError('Login inválido. Por favor, tente novamente.');
@@ -27,7 +28,7 @@ function LoginPage() {
             setError('Por favor, preencha ambos os campos.');
         }
     };
-    // rotear para a página de cadastro
+
     const handleRegister = () => {
         navigate('/RegisterPage');
     };
