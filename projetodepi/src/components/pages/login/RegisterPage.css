@@ -14,9 +14,9 @@
 }
 
 .register-page h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 18px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #3D5547;
 }
 
@@ -28,8 +28,7 @@
 }
 
 .register-page form {
-    width: 400px; /* Largura do formulário */
-    
+    width: 400px;
 }
 
 .register-page .form-group {
@@ -62,16 +61,17 @@
 
 .register-page button {
     padding: 10px;
-    width: 100%;
+    margin-bottom: 20px;
+    width: 200px;
     border: none;
     border-radius: 5px;
-    background-color: #3D5547; /* Cor do botão semelhante à página de login */
-    color: #fff; /* Cor do texto do botão */
+    background-color: #3D5547; 
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
 
 .register-page button:hover {
-    background-color: #88b297; /* Cor do botão ao passar o mouse semelhante à página de login */
+    background-color: #88b297; 
 }

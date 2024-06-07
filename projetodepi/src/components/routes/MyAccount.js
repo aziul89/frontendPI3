@@ -1,30 +1,68 @@
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import styles from './MenuHome.css'
+import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import styles from './MenuHome.css';
+import Swal from 'sweetalert2';
+import { useAuth } from './../../AuthContext'
 
 const DropdownMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const { isLoggedIn, setIsLoggedIn } = useAuth();
+    const navigate = useNavigate();
 
-  const handleMouseEnter = () => {
-    setIsOpen(true);
-  };
+    const handleMouseEnter = () => {
+        setIsOpen(true);
+    };
 
-  const handleMouseLeave = () => {
-    setIsOpen(false);
-  };
+    const handleMouseLeave = () => {
+        setIsOpen(false);
+    };
 
-  return (
-    <div className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <button className="dropdown-toggle category-button">MINHA CONTA</button>
-      {isOpen && (
-        <ul className="dropdown-menu">
-          <li className={styles.linkstyle}><Link to="/DataPage">Meus Dados</Link></li>
-          <li className={styles.linkstyle}><Link to="/Favoritos">Meus Favortios</Link></li>
-          <li className={styles.linkstyle}><Link to="/Pedidos">Meus Pedidos</Link></li>
-        </ul>
-      )}
-    </div>
-  );
+    const handleLogout = () => {
+        Swal.fire({
+            title: 'Você deseja mesmo sair?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, deslogar!',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setIsLoggedIn(false);
+                localStorage.removeItem('user');
+                navigate('/LoginPage');
+            }
+        });
+    };
+
+    useEffect(() => {
+        const savedState = localStorage.getItem('isLoggedIn');
+        if (savedState) {
+            setIsLoggedIn(JSON.parse(savedState));
+        }
+    }, [setIsLoggedIn]);
+
+    return (
+        <div className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {isLoggedIn ? (
+                <>
+                    <button className="dropdown-toggle category-button">MINHA CONTA</button>
+                    {isOpen && (
+                        <ul className="dropdown-menu">
+                            <li className={styles.linkstyle}><Link to="/DataPage">Meus Dados</Link></li>
+                            <li className={styles.linkstyle}><Link to="/Favoritos">Meus Favoritos</Link></li>
+                            <li className={styles.linkstyle}><Link to="/Pedidos">Meus Pedidos</Link></li>
+                            <li className={styles.linkstyle}>
+                                <button className="logout-button" onClick={handleLogout}>Sair</button>
+                            </li>
+                        </ul>
+                    )}
+                </>
+            ) : (
+                <Link to="/LoginPage">Login</Link>
+            )}
+        </div>
+    );
 };
 
 export default DropdownMenu;

@@ -4,26 +4,30 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #FFF9E2; /* Cor de fundo semelhante à página de login */
+    background-color: #FFF9E2; 
 }
 
 .address-page h2 {
     margin-bottom: 20px;
-    font-size: 24px;
-    color: #3D5547; /* Cor do texto semelhante à página de login */
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #3D5547; 
 }
 
 .address-page .progress-message {
-    color: red;
     margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #eb0909; 
 }
 
 .address-page form {
-    width: 400px; /* Largura do formulário */
+    width: 400px;
 }
 
 .address-page .form-group {
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .address-page .form-group label {
@@ -50,16 +54,17 @@
 
 .address-page button {
     padding: 10px;
-    width: 100%;
+    width: 200px;
+    margin-top: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #3D5547; /* Cor do botão semelhante à página de login */
-    color: #fff; /* Cor do texto do botão */
-    font-size: 16px;
+    background-color: #3D5547; 
+    color: #fff;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
 
 .address-page button:hover {
-    background-color: #88b297; /* Cor do botão ao passar o mouse semelhante à página de login */
+    background-color: #88b297; 
 }
