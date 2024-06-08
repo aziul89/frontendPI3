@@ -3,11 +3,15 @@
     padding: 20px;
   }
   
-.favoritos-title {
-    font-family: "Titillium Web", sans-serif;
-    color: #333;
-    margin-left: 10px;
+  .favoritos-title {
+    font-size: 18px;
+    font-weight: 200;
+    color: #3D5547;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
   }
+  
+  
   
   .empty-favoritos {
     text-align: center;
