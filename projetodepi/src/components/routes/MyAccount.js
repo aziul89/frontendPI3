@@ -24,7 +24,7 @@ const DropdownMenu = () => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Sim, deslogar!',
+            confirmButtonText: 'Sim, sair!',
             cancelButtonText: 'Cancelar'
         }).then((result) => {
             if (result.isConfirmed) {
@@ -50,8 +50,9 @@ const DropdownMenu = () => {
                     {isOpen && (
                         <ul className="dropdown-menu">
                             <li className={styles.linkstyle}><Link to="/DataPage">Meus Dados</Link></li>
-                            <li className={styles.linkstyle}><Link to="/Favoritos">Meus Favoritos</Link></li>
-                            <li className={styles.linkstyle}><Link to="/Pedidos">Meus Pedidos</Link></li>
+                            <li className={styles.linkstyle}><Link to="/Carrinho">Carrinho</Link></li>
+                            <li className={styles.linkstyle}><Link to="/Favoritos">Favoritos</Link></li>
+                            <li className={styles.linkstyle}><Link to="/Pedidos">Pedidos</Link></li>
                             <li className={styles.linkstyle}>
                                 <button className="logout-button" onClick={handleLogout}>Sair</button>
                             </li>

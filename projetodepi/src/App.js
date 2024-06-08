@@ -18,6 +18,7 @@ import AddressPage from './components/pages/login/AddressPage';
 //pages_myaccount
 import Favoritos from './components/pages/myaccount/favoritos'
 import Pedidos from './components/pages/myaccount/pedidos'
+import Carrinho from './components/pages/myaccount/carrinho';
 //components
 import Header from './components/pages/home/Header';
 
@@ -41,7 +42,7 @@ function App() {
           <Route path="/RegisterPage" element={<RegisterPage />}/>
           <Route path="/AddressPage" element={<AddressPage />}/>
           <Route path="/QuemSomos" element={<QuemSomos />} />
-          
+          <Route path="/Carrinho" element={<Carrinho />} />
           <Route path="/Pedidos" element={<Pedidos />} />
           <Route path="/Favoritos" element={<Favoritos />} />
         </Routes>  
