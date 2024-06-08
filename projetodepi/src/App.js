@@ -21,38 +21,41 @@ import Cart from './components/pages/myaccount/carrinho';
 import { CartProvider } from './CartContext';
 import { AuthProvider } from './AuthContext';
 import { FavoritosProvider } from './FavoritosContext'; // Importar FavoritosProvider
+import { OrdersProvider } from './OrdersContext'; // Importar OrdersProvider
 
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <FavoritosProvider> {/* Adicionar FavoritosProvider */}
-          <div className="App">
-            <Router>
-              <Header />
-              <div className="content">
-                <div className="main-content">
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/CategoriaRoupa" element={<CategoriaRoupa />} />
-                    <Route path="/CategoriaAcessorio" element={<CategoriaAcessorio />} />
-                    <Route path="/CategoriaCalcado" element={<CategoriaCalcado />} />
-                    <Route path="/CategoriaCosmetico" element={<CategoriaCosmetico />} />
-                    <Route path="/LoginPage" element={<LoginPage />} />
-                    <Route path="/DataPage" element={<DataPage />} />
-                    <Route path="/RegisterPage" element={<RegisterPage />} />
-                    <Route path="/AddressPage" element={<AddressPage />} />
-                    <Route path="/QuemSomos" element={<QuemSomos />} />
-                    <Route path="/Carrinho" element={<Carrinho />} />
-                    <Route path="/Pedidos" element={<Pedidos />} />
-                    <Route path="/Favoritos" element={<Favoritos />} />
-                    <Route path="/product/:id" element={<ProductDetail />} />
-                    <Route path="/cart" element={<Cart />} />
-                  </Routes>
+        <FavoritosProvider>
+          <OrdersProvider> {/* Utilizar OrdersProvider em vez de PedidosProvider */}
+            <div className="App">
+              <Router>
+                <Header />
+                <div className="content">
+                  <div className="main-content">
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/CategoriaRoupa" element={<CategoriaRoupa />} />
+                      <Route path="/CategoriaAcessorio" element={<CategoriaAcessorio />} />
+                      <Route path="/CategoriaCalcado" element={<CategoriaCalcado />} />
+                      <Route path="/CategoriaCosmetico" element={<CategoriaCosmetico />} />
+                      <Route path="/LoginPage" element={<LoginPage />} />
+                      <Route path="/DataPage" element={<DataPage />} />
+                      <Route path="/RegisterPage" element={<RegisterPage />} />
+                      <Route path="/AddressPage" element={<AddressPage />} />
+                      <Route path="/QuemSomos" element={<QuemSomos />} />
+                      <Route path="/Carrinho" element={<Carrinho />} />
+                      <Route path="/Pedidos" element={<Pedidos />} />
+                      <Route path="/Favoritos" element={<Favoritos />} />
+                      <Route path="/product/:id" element={<ProductDetail />} />
+                      <Route path="/cart" element={<Cart />} />
+                    </Routes>
+                  </div>
                 </div>
-              </div>
-            </Router>
-          </div>
+              </Router>
+            </div>
+          </OrdersProvider>
         </FavoritosProvider>
       </CartProvider>
     </AuthProvider>
@@ -60,4 +63,3 @@ function App() {
 }
 
 export default App;
-

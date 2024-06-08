@@ -9,7 +9,7 @@ const Favoritos = () => {
     <div className="favoritos-container">
       <h1 className="favoritos-title">FAVORITOS</h1>
       {favoritos.length === 0 ? (
-        <p className='empty-favoritos'>Você não tem favoritos ainda.</p>
+        <p className='empty-favoritos'>Seu favoritos está vazio.</p>
       ) : (
         <div className="grid-container">
           {favoritos.map((item, index) => (

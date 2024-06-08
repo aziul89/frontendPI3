@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FFF9E2;
+    height: 100vh;
+  }
+  
+  .meus-pedidos, .historico {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    font-weight: 200;
+    color: #3D5547;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+  }
+
+ h3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+
+  }
+  
+  .pedido {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .pedido-image {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+  
+  
