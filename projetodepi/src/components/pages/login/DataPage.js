@@ -29,7 +29,6 @@ function UserProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar os dados atualizados para o servidor
     console.log('Nome:', name);
     console.log('Email:', email);
     console.log('Endereço:', endereco);
@@ -52,9 +51,9 @@ function UserProfile() {
         )}
       </div>
       <div className={styles.profileInfo}>
-        <p className={styles.profileName}>NOME: {name || ''}</p>
-        <p className={styles.profileEmail}>EMAIL: {email || ''}</p>
-        <p className={styles.profileEndereco}>ENDEREÇO: {endereco || ''}</p>
+        <p className={styles.profileName}>Nome: {name || 'N/A'}</p>
+        <p className={styles.profileEmail}>Email: {email || 'N/A'}</p>
+        <p className={styles.profileEndereco}>Endereço: {endereco || 'N/A'}</p>
       </div>
       {isEditing ? (
         <form onSubmit={handleSubmit} className={styles.profileForm}>
@@ -98,11 +97,29 @@ function UserProfile() {
               className={styles.input}
             />
           </div>
-          <button type="submit" className={styles.submitButton}>SALVAR</button>
+          <button type="submit" className={styles.submitButton}>Salvar</button>
         </form>
       ) : (
-        <button onClick={handleEditClick} className={styles.submitButton}>ALTERAR DADOS</button>
+        <button onClick={handleEditClick} className={styles.editButton}>Alterar Dados</button>
       )}
+
+      <div className={styles.additionalSections}>
+        
+        <h2 className={styles.sectionTitle}>Endereços de Entrega</h2>
+        <div className={styles.addresses}>
+          <p>Nenhum endereço cadastrado.</p>
+        </div>
+        
+        <h2 className={styles.sectionTitle}>Cupons e Ofertas</h2>
+        <div className={styles.coupons}>
+          <p>Você não possui cupons disponíveis.</p>
+        </div>
+
+        <h2 className={styles.sectionTitle}>Carteira</h2>
+        <div className={styles.wallet}>
+          <p>Nenhum cartão cadastrado.</p>
+        </div>
+      </div>
     </div>
   );
 }
