@@ -9,7 +9,8 @@ export const AuthProvider = ({ children }) => {
     });
 
     useEffect(() => {
-        localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
+     localStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn));
+     fetch("http://localhost:8080/")
     }, [isLoggedIn]);
 
     return (
