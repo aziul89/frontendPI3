@@ -14,6 +14,7 @@ export const OrdersProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('orders', JSON.stringify(orders));
+    fetch("http://localhost:8080/product")
   }, [orders]);
 
   const addOrder = (order) => {
