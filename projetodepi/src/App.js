@@ -20,15 +20,16 @@ import Cart from './components/pages/myaccount/carrinho';
 // Importar contextos
 import { CartProvider } from './CartContext';
 import { AuthProvider } from './AuthContext';
-import { FavoritosProvider } from './FavoritosContext'; // Importar FavoritosProvider
+import { FavoritesProvider } from './FavoritesContext';
+// import { FavoritosProvider } from './FavoritesContext'; // Importar FavoritosProvider
 import { OrdersProvider } from './OrdersContext'; // Importar OrdersProvider
 
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <FavoritosProvider>
-          <OrdersProvider> {/* Utilizar OrdersProvider em vez de PedidosProvider */}
+        <FavoritesProvider>
+          <OrdersProvider> 
             <div className="App">
               <Router>
                 <Header />
@@ -56,7 +57,7 @@ function App() {
               </Router>
             </div>
           </OrdersProvider>
-        </FavoritosProvider>
+        </FavoritesProvider>
       </CartProvider>
     </AuthProvider>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from '../../../CartContext';
+import { useFavorites } from '../../../FavoritesContext';
 import { useAuth } from '../../../AuthContext';
 import Swal from 'sweetalert2';
 import './ProductDetail.css';
@@ -17,6 +18,7 @@ const products = [
 function ProductDetail() {
   const { id } = useParams();
   const { addToCart } = useCart();
+  const { addToFavorites } = useFavorites();
   const { isLoggedIn } = useAuth();
   const product = products.find(p => p.id === parseInt(id));
 
@@ -37,6 +39,23 @@ function ProductDetail() {
     }
   };
 
+  const handleAddToFavorites = () => {
+    if (isLoggedIn) {
+      addToFavorites(product);
+      Swal.fire({
+        title: 'Produto adicionado aos favoritos!',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+    } else {
+      Swal.fire({
+        title: 'Você precisa estar logado para adicionar aos favoritos.',
+        icon: 'warning',
+        confirmButtonText: 'OK'
+      });
+    }
+  };
+
   if (!product) {
     return <h2>Oops... Produto não encontrado :/ </h2>;
   }
@@ -49,13 +68,17 @@ function ProductDetail() {
       <div className="product-detail-info">
         <h2>{product.name}</h2>
         <p>{product.price}</p>
-        <button className="buy-button" onClick={handleAddToCart}>Comprar</button>
+        <div className="button-group">
+          <button className="buy-button" onClick={handleAddToCart}>Comprar</button>
+          <button className="favorite-button" onClick={handleAddToFavorites}>Adicionar aos Favoritos</button>
+        </div>
         <div className='product-about'>
             <h3>Sobre</h3>
             <p>Descrição do produto.</p>
         </div>
         <div className='product-comentary'>
             <h3>Comentários</h3>
+            <p>Ainda não possui comentários.</p>
         </div>
       </div>
     </div>

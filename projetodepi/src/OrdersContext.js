@@ -1,20 +1,27 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
-export const OrdersContext = createContext();
+const OrdersContext = createContext();
 
 export const useOrders = () => {
   return useContext(OrdersContext);
 };
 
 export const OrdersProvider = ({ children }) => {
-  const [pedidos, setPedidos] = useState([]);
+  const [orders, setOrders] = useState(() => {
+    const savedOrders = localStorage.getItem('orders');
+    return savedOrders ? JSON.parse(savedOrders) : [];
+  });
 
-  const adicionarPedido = (pedido) => {
-    setPedidos([...pedidos, pedido]);
+  useEffect(() => {
+    localStorage.setItem('orders', JSON.stringify(orders));
+  }, [orders]);
+
+  const addOrder = (order) => {
+    setOrders((prevOrders) => [...prevOrders, order]);
   };
 
   return (
-    <OrdersContext.Provider value={{ pedidos, adicionarPedido }}>
+    <OrdersContext.Provider value={{ orders, addOrder }}>
       {children}
     </OrdersContext.Provider>
   );

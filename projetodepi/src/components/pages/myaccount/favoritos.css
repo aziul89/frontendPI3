@@ -4,19 +4,17 @@
   }
   
   .favoritos-title {
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 300;
     color: #3D5547;
     letter-spacing: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
-  
-  
   
   .empty-favoritos {
     text-align: center;
-    color: #666;
-    font-size: 18px;
+    color: #000;
+    font-size: 16px;
   }
   
   .grid-container {

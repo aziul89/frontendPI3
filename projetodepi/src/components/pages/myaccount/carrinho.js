@@ -1,14 +1,22 @@
 import React from 'react';
 import { useCart } from '../../../CartContext';
-// import from app.css
+import { useOrders } from '../../../OrdersContext';
+import Swal from 'sweetalert2';
+
 
 function Carrinho() {
   const { cart, removeFromCart, clearCart } = useCart();
+  const { addOrder } = useOrders();
 
   const handleFinalizarCompra = () => {
     // Lógica para processar a compra
-    alert('Compra finalizada com sucesso!');
-    clearCart(); 
+    Swal.fire({
+      title: 'Compra finalizada com sucesso :)',
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+    addOrder({ items: cart, date: new Date().toLocaleString() });
+    clearCart();
   };
 
   return (
