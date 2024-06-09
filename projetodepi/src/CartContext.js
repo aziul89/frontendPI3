@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
 const CartContext = createContext();
@@ -27,6 +28,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
+fetch("http://localhost:8080/product")
   }, [cart]);
 
   const addToCart = product => {
