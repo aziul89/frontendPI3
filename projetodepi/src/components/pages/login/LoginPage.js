@@ -17,8 +17,9 @@ function LoginPage() {
         const trimmedUsername = username.trim();
         const trimmedPassword = password.trim();
 
+        // teste de login
         if (trimmedUsername !== '' && trimmedPassword !== '') {
-            if (trimmedUsername === 'teste' && trimmedPassword === 'teste') {
+            if (trimmedUsername !== '' && trimmedPassword !== '') {
                 setError('');
                 setIsLoggedIn(true);
                 navigate('/DataPage');
