@@ -14,7 +14,7 @@ function CategoriaRoupa() {
 
   return (
     <div className="categoria">
-      <h2>CLOTHING</h2>
+      <h2>ROUPAS</h2>
       <div className="grid">
         {products.map(product  => (
           <Link key={product.idProduto} to={`/product/${product.idProduto}`} className="product-card">
