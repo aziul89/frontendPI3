@@ -14,7 +14,7 @@ function ProductDetail() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://inici-1.onrender.com/product")
+    fetch("http://localhost:8080/product")
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));
