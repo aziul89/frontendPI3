@@ -6,7 +6,7 @@ function CategoriaRoupa() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://inici-1.onrender.com/product")
+    fetch("https://pi-3-concon.onrender.com/product")
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));
