@@ -14,7 +14,7 @@ function ProductDetail() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/product")
+    fetch("https://pi-3-concon.onrender.com/product")
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching data:', error));
