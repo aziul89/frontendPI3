@@ -13,8 +13,7 @@ function ProductDetail() {
   const { isLoggedIn } = useAuth();
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {git
-
+  useEffect(() => {
     fetch("https://inici-1.onrender.com/product")
       .then(response => response.json())
       .then(data => setProducts(data))

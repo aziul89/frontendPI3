@@ -7,6 +7,9 @@ import CategoriaAcessorio from './components/pages/categoria/CategoriaAcessorio'
 import CategoriaCalcado from './components/pages/categoria/CategoriaCalcado';
 import CategoriaCosmetico from './components/pages/categoria/CategoriaCosmetico';
 import ProductDetail from './components/pages/categoria/ProductDetail';
+import ProductCDetail from './components/pages/categoria/ProductCDetail';
+import ProductCALDetail from './components/pages/categoria/ProductCALDetail';
+import ProductACDetail from './components/pages/categoria/ProductACDetail';
 import QuemSomos from './components/pages/home/QuemSomos';
 import LoginPage from './components/pages/login/LoginPage';
 import DataPage from './components/pages/login/DataPage';
@@ -50,6 +53,9 @@ function App() {
                       <Route path="/Pedidos" element={<Pedidos />} />
                       <Route path="/Favoritos" element={<Favoritos />} />
                       <Route path="/product/:id" element={<ProductDetail />} />
+                      <Route path="/productC/:id" element={<ProductCDetail />} />
+                      <Route path="/productCAL/:id" element={<ProductCALDetail />} />
+                      <Route path="/productAC/:id" element={<ProductACDetail />} />
                       <Route path="/cart" element={<Cart />} />
                     </Routes>
                   </div>
